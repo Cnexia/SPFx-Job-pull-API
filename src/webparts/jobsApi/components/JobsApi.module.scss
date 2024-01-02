@@ -1,0 +1,282 @@
+/* JobsApi.module.scss */
+
+/* Style for the search container */
+.searchContainer {
+  margin-bottom: 20px; /* Adjust the margin as needed */
+}
+
+/* Style for the search input field */
+.searchInput {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  outline: none;
+}
+
+/* Style for each job card */
+.card {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  padding: 20px;
+  width: 100%;
+  max-width: 300px;
+  margin-bottom: 20px; /* Adjust the margin as needed */
+  max-height: 500px; /* Set the initial max height */
+  overflow: hidden;
+  transition: max-height 0.3s ease, transform 0.3s ease; /* Add transitions with ease timing function */
+}
+
+/* Style for the job card header (title and organization) */
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cardHeader h2 {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.cardHeader span {
+  color: #555;
+  font-size: 0.9rem;
+}
+
+/* Style for the job card content (position type and description) */
+.cardContent {
+  margin-top: 10px;
+  transition: opacity 0.3s ease-in-out; /* Add a smooth transition effect for content */
+}
+
+.cardContent p {
+  font-size: 1rem;
+  margin: 0;
+  color: #333;
+}
+
+/* Style for the job card description (HTML content) */
+.cardContent div {
+  font-size: 1rem;
+  color: #333;
+}
+
+/* Hover effect for the job cards */
+.card:hover {
+  max-height: none; /* Expand to show full content on hover */
+  cursor: pointer;
+  background-color: #e1f7e7; /* Change the background color to green on hover */
+  transform: scale(1.05); /* Scale the card a bit on hover */
+}
+
+/* Show content on hover */
+.card:hover .cardContent {
+  opacity: 1;
+}
+
+/* Pagination styles */
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.pagination button {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  color: #333;
+  padding: 8px 12px;
+  margin: 0 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.pagination button:hover {
+  background-color: #e1f7e7;
+  color: #00a900;
+}
+
+.pagination .activePage {
+  background-color: #00a900;
+  color: #fff;
+  font-weight: bold;
+}
+
+.jobsApi {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+
+/* --------------------------------> The new job offers styles <--------------------------------- */
+
+*{
+  margin:0;
+}
+
+.jobsApi{
+  display: grid;
+  grid-template-rows: auto auto;
+  grid-gap: 20px;
+  
+
+}
+
+.container_title{
+  color: #044123;
+  font-family: Inter;
+  font-size: 2.875rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin-left: 20px;
+  margin-top: 10px;
+}
+.Jobs_container{
+  display: grid;
+  grid-template-rows: 5rem auto;
+  border-radius: 2.8125rem;
+  border: 2px solid #D1D1D1;
+  padding: 10px;
+  max-width: 40.1875rem ;
+  max-height: 48.9375rem;
+  overflow: hidden;
+  
+  
+  grid-gap: 20px;
+}
+.job_navigation_bar{
+
+  display: grid;
+  grid-template-columns: 50px auto;
+  
+  grid-gap: 20px;
+  
+
+  max-width: 40.1875rem;
+  min-width: 30rem;
+  height: 4rem;
+  
+  border-radius: 2.4375rem;
+  background: #EDEDED;
+  margin: 10px;
+
+
+
+}
+.jobs_display_container{
+  overflow-y: scroll;
+  display: grid;
+  grid-template-rows: auto;
+  grid-gap: 20px;
+  padding: 10px;
+}
+
+.jobs_display{
+  max-width: 40.1875rem;
+  height: 12.375rem;
+  flex-shrink: 0;
+  border-radius: 2.625rem;
+  background: #FCFCFC;
+  box-shadow: 0px 1px 15px 1px rgba(0, 0, 0, 0.12);
+  padding: 20px;
+  display: grid;
+  grid-template-rows: auto;
+  transition: background-color 0.3s, color 0.3s;
+
+}
+
+.ACI{
+  color: #03B586;
+  text-align: justify;
+  font-family: Inter;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: uppercase;
+}
+.job_title{
+  color: #044123;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.job_description{
+  color: #909090;
+  text-align: justify;
+  font-family: Inter;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+
+  max-height: 4.9375rem;
+  overflow: hidden;
+
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.job_search_input{
+  
+  border: none;
+  outline: none;
+  padding: 5px;
+  font-size: 16px;
+  z-index: 1;
+  background: transparent;
+  
+  
+}
+.serch_icon {
+  margin-right: 5px; /* Adjust the margin as needed */
+  cursor: pointer;
+  z-index: 2;
+  position: relative;
+  top: 10px;
+  left: 10px;
+  padding: 10px;
+}
+.card_button{
+  text-align: right;
+  
+  margin-top: 20px;
+}
+.card_button a{
+  color: #03B586;
+  text-decoration: none;
+}
+
+.jobs_display:hover {
+  background-color: #03B586; /* Change background color on hover */
+  box-shadow: none;
+
+}
+
+.jobs_display:hover .ACI {
+  color: white;
+}
+.jobs_display:hover .job_title{
+  color: white;
+}
+.jobs_display:hover .job_description{
+  color: white;
+}
+.jobs_display:hover .card_button a{
+  color: white;
+}
+
+
+.job_description_field{
+  max-height: 4.9375rem;
+  overflow: hidden;
+}

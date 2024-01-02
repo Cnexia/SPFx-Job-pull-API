@@ -1,0 +1,18 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "jobs-api-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/jobsApi/JobsApiWebPart.js",
+          "manifest": "./src/webparts/jobsApi/JobsApiWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "JobsApiWebPartStrings": "lib/webparts/jobsApi/loc/{locale}.js"
+  }
+}
